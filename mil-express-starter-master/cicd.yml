@@ -1,0 +1,27 @@
+pool:
+  name: Default
+steps:
+- task: NodeTool@0
+  displayName: 'Use Node 6.x'
+  inputs:
+    checkLatest: true
+
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    workingDir: 'mil-express-starter-master'
+    verbose: false
+
+- task: ArchiveFiles@2
+  displayName: 'Archive mil-express-starter-master'
+  inputs:
+    rootFolderOrFile: 'mil-express-starter-master'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: artifact'
+  inputs:
+    SourceFolder: 'mil-express-starter-master'
+    TargetFolder: artifact
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
