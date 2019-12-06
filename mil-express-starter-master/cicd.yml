@@ -1,5 +1,5 @@
 pool:
-  name: 'Default'
+  name: 'Azure Pipelines'
 steps:
 - task: NodeTool@0
   displayName: 'Use Node 6.x'
