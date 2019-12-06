@@ -1,5 +1,5 @@
 pool:
-  name: Default
+  name: 'windows-2019'
 steps:
 - task: NodeTool@0
   displayName: 'Use Node 6.x'
