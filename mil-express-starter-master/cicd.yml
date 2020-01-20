@@ -35,6 +35,7 @@ steps:
 - task: AzureRmWebAppDeployment@4
   displayName: 'Deploy Azure App Service'
   inputs:
-    azureSubscription: '$(Parameters.ConnectedServiceName)'
+#     azureSubscription: '$(Parameters.ConnectedServiceName)'
+      azureSubscription: '90a2f185-6456-4b47-a481-9c15ebc254a2'
     appType: '$(Parameters.WebAppKind)'
     WebAppName: '$(Parameters.WebAppName)'
