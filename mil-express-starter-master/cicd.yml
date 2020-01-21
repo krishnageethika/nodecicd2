@@ -32,10 +32,10 @@ steps:
 #Your build pipeline references an undefined variable named ‘Parameters.WebAppName’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 
 
-- task: AzureRmWebAppDeployment@4
+- task: AzureRmWebAppDeployment@1
   displayName: 'Deploy Azure App Service'
   inputs:
-      azureSubscription: '$(Parameters.ConnectedServiceName)'
-#       azureSubscription: '90a2f185-6456-4b47-a481-9c15ebc254a2'
+#       azureSubscription: '$(Parameters.ConnectedServiceName)'
+      azureSubscription: '90a2f185-6456-4b47-a481-9c15ebc254a2'
       appType: '$(Parameters.WebAppKind)'
       WebAppName: '$(Parameters.WebAppName)'
